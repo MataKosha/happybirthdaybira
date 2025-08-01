@@ -1,0 +1,109 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", sans-serif;
+  background: linear-gradient(to bottom right, #ffefef, #ffdada);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.card {
+  background-color: #fffafa;
+  border-radius: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  padding: 30px 40px;
+  max-width: 500px;
+  width: 100%;
+  text-align: center;
+  animation: fadeIn 2s ease;
+}
+
+.card h1 {
+  font-size: 2em;
+  color: #d6336c;
+  margin-bottom: 20px;
+}
+
+.message {
+  font-size: 1.1em;
+  color: #444;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+.signature {
+  font-style: italic;
+  color: #888;
+}
+
+canvas#fireworks {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.card {
+  position: relative;
+  z-index: 1;
+  background-color: #fffafa;
+  border-radius: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  padding: 30px 40px;
+  max-width: 500px;
+  width: 100%;
+  text-align: center;
+  animation: fadeIn 2s ease;
+}
+
+#play-music {
+  background-color: #d6336c;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1em;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  margin-top: 20px;
+}
+
+#play-music:hover {
+  background-color: #c0265a;
+}
+
+/* Анимация появления */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Адаптация для мобильных */
+@media (max-width: 600px) {
+  .card {
+    padding: 20px;
+  }
+
+  .card h1 {
+    font-size: 1.6em;
+  }
+
+  .message {
+    font-size: 1em;
+  }
+}
